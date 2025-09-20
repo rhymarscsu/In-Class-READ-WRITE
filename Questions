@@ -1,0 +1,16 @@
+
+Question Solutions-
+
+Q1- The reason we use sudo is for higher adiministrative purposes such as if we are acessing port 80 which is a protected port, in this case we do not require this ability.
+
+Q2- The purpose of lab.js is to read the plain text file asynchronously, report an error if there is one, if no error is present then lab.js converts the content of the file into utf8, and finally prints it to the console.
+
+Q3- The reason as to why after readFile appears before the actual content of the text file is simple. lab.js does not pause when reading the file, it does it asynchronously, so lab.js while reading the file prints *after readFile* and when it is finished reading, it prints the content of the text file.
+
+Q4- The function toString('utf8') takes the raw binary data and converts it into a readable string using utf8, wihtout it we just get a bunch of ASCII values.
+
+Q5-We don’t need toString('utf8') because the buffer can be sent directly to the client, and the browser will handle decoding it as text based on the response headers.
+
+Q6: The server can serve all types of files by using the URL (req.url) to find the requested file and checking its file extension to set the correct Content-Type. This way, the same code can serve text files, images, HTML, JavaScript, and other file types without changing the code each time.
+
+Q7: The server can handle both static files and dynamic routes by checking the URL. If the URL matches a dynamic route, it sends a custom response. Otherwise it sends the corresponding file with the correct Content-Type. This allows the server to send HTML, JS, images, and respond to requests in the same program.

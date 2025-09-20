@@ -1,0 +1,4 @@
+
+Question Solutions-
+
+Q1- The reason we use sudo is for higher adiministrative purposes such as if we are acessing port 80 which is a protected port, in this case we do not require this ability.
